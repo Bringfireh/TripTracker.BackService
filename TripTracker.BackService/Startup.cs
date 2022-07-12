@@ -41,7 +41,7 @@ namespace TripTracker.BackService
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+           app.UseHttpsRedirection();
             app.UseMvc();
         }
     }
