@@ -33,6 +33,10 @@ namespace TripTracker.BackService.Models
         {
             return trips;
         }
+        public Trip Get(int id)
+        {
+            return trips.First(t => t.Id == id);
+        }
         public void Add(Trip newtrip)
         {
             trips.Add(newtrip);
