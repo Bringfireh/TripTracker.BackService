@@ -33,9 +33,18 @@ namespace TripTracker.BackService.Models
         {
             return trips;
         }
-        public void Add(Trip mtrip)
+        public void Add(Trip newtrip)
         {
-            
+            trips.Add(newtrip);
+        }
+        public void Update(Trip utrip)
+        {
+            trips.Remove(trips.First(t => t.Id == utrip.Id));
+            trips.Add(utrip);
+        }
+        public void Remove(int id)
+        {
+            trips.Remove(trips.First(t => t.Id == id));
         }
     }
 }
